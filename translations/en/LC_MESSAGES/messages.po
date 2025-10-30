@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-30 09:33+0000\n"
+"POT-Creation-Date: 2025-10-30 21:07+0100\n"
 "PO-Revision-Date: 2025-10-30 09:34+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,35 +18,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/index.html:20 templates/index.html:81
+#: templates/index.html:20 templates/index.html:74
+#: templates/project_detail.html:20
 msgid "Home"
 msgstr "Home"
 
-#: templates/index.html:21 templates/index.html:83
+#: templates/index.html:21 templates/index.html:76
 msgid "Resume"
 msgstr "Resume"
 
-#: templates/index.html:22 templates/index.html:84
+#: templates/index.html:22 templates/index.html:77
+#: templates/project_detail.html:21
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/index.html:36
+#: templates/index.html:38
 msgid "Title"
 msgstr "Engineer..."
 
-#: templates/index.html:37
+#: templates/index.html:39
 msgid "Subtitle"
 msgstr "I don't know..."
 
-#: templates/index.html:44
+#: templates/index.html:46
 msgid "My Work"
 msgstr "My Projects"
 
-#: templates/index.html:82
+#: templates/index.html:75
 msgid "About"
 msgstr "About"
 
-#: templates/index.html:103
+#: templates/index.html:96 templates/project_detail.html:92
 msgid "Copyright"
 msgstr "All rights reserved"
+
+#: templates/project_detail.html:41
+msgid "View Live Project"
+msgstr "View Live Project"
+
+#: templates/project_detail.html:44
+msgid "View on GitHub"
+msgstr "View on GitHub"
+
+#: templates/project_detail.html:49
+msgid "Project info"
+msgstr "Project information"
+
+#: templates/project_detail.html:55
+msgid "Technology stack"
+msgstr "Technology stack"
+
+#: templates/project_detail.html:65
+msgid "Back to All Projects"
+msgstr "Back to All Projects"
 

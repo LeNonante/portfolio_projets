@@ -1,18 +1,17 @@
-# French translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR aurelien.musset54@gmail.com, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-30 21:07+0100\n"
-"PO-Revision-Date: 2025-10-30 09:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,54 +20,54 @@ msgstr ""
 #: templates/index.html:20 templates/index.html:74
 #: templates/project_detail.html:20
 msgid "Home"
-msgstr "Accueil"
+msgstr ""
 
 #: templates/index.html:21 templates/index.html:76
 msgid "Resume"
-msgstr "CV"
+msgstr ""
 
 #: templates/index.html:22 templates/index.html:77
 #: templates/project_detail.html:21
 msgid "Contact"
-msgstr "Me contacter"
+msgstr ""
 
 #: templates/index.html:38
 msgid "Title"
-msgstr "Ingénieur..."
+msgstr ""
 
 #: templates/index.html:39
 msgid "Subtitle"
-msgstr "Je sais pas..."
+msgstr ""
 
 #: templates/index.html:46
 msgid "My Work"
-msgstr "Mes projets"
+msgstr ""
 
 #: templates/index.html:75
 msgid "About"
-msgstr "A propos de moi"
+msgstr ""
 
 #: templates/index.html:96 templates/project_detail.html:92
 msgid "Copyright"
-msgstr "Tous droits réservés."
+msgstr ""
 
 #: templates/project_detail.html:41
 msgid "View Live Project"
-msgstr "Voir le projet en ligne"
+msgstr ""
 
 #: templates/project_detail.html:44
 msgid "View on GitHub"
-msgstr "Voir sur GitHub"
+msgstr ""
 
 #: templates/project_detail.html:49
 msgid "Project info"
-msgstr "Informations du projet"
+msgstr ""
 
 #: templates/project_detail.html:55
 msgid "Technology stack"
-msgstr "Stack technique"
+msgstr ""
 
 #: templates/project_detail.html:65
 msgid "Back to All Projects"
-msgstr "Retour à tous les projets"
+msgstr ""
 

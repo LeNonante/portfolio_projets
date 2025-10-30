@@ -2,28 +2,27 @@
     {
         "id": "1",
         "fr": {
-            "title": "Projet Exemple",
-            "description": "Ceci est une description d'exemple pour un projet."
+            "title": "Gamehub",
+            "description": "Plateforme en ligne de jeux de société jouables directement dans le navigateur, avec gestion des utilisateurs et des parties.",
+            "information": {
+                "date": ["Date ", "2025"],
+                "duration": ["Durée ", "en cours de développement"],
+                "type": ["Type ", "Plateforme Web"]
+            }
         },
         "en": {
-            "title": "Example Project",
-            "description": "This is a sample description for a project."
+            "title": "Gamehub",
+            "description": "Online board game platform playable directly in the browser, with user and game management.",
+            "information": {
+                "date": ["Date", "2025"],
+                "duration": ["Duration","ongoing development"],
+                "type": ["Type","Web Platform"]
+            }
         },
-        "tags": ["Flask", "JavaScript", "CSS"],
-        "image": "/static/projects/1/img.png"
-    },
-    {
-        "id": "2",
-        "fr": {
-            "title": "Deuxième Projet",
-            "description": "Description du deuxième projet en français."
-        },
-        "en": {
-            "title": "Second Project",
-            "description": "Description of the second project in English."
-        },
-        "tags": ["Flask", "JavaScript", "CSS"],
-        "image": "/static/projects/1/img.png"
+        "tags": ["Flask", "JavaScript", "CSS", "PostgreSQL", "Docker"],
+        "image": "/static/projects/1/img.png",
+        "live_url": "https://gamehub.lenonante.qzz.io",
+        "github_url": "https://github.com/LeNonante/GameHub"
     }
 
 

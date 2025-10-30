@@ -1,0 +1,192 @@
+:root {
+    --aside-width: 320px;
+    --accent: #3b82f6;
+    --muted: #9ca3af;
+}
+
+.project-layout {
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    gap: 2rem;
+    padding: 4rem 0;
+    align-items: start;
+}
+
+/* Aside */
+.project-aside {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+}
+
+.pd-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #fff;
+}
+
+.pd-subtitle {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.pd-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.pd-ctas a.btn-primary,
+.pd-ctas a.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* centre l'icône + texte horizontalement */
+    text-align: center;
+    gap: 0.6rem;
+    padding: 0.75rem 0.85rem; /* espace vertical un peu augmenté */
+    width: 100%; /* bouton pleine largeur pour un centrage fiable */
+    border-radius: 0.5rem;
+}
+
+.pd-info-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.pd-info-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    position: relative;
+    margin-top: 1.2rem;
+    padding-top: 0.6rem;
+}
+
+.pd-info-card h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: auto;           /* longueur du trait, ajuste si besoin */
+    height: 2px;           /* épaisseur du trait */
+    background: rgba(255,255,255,0.06);
+}
+
+
+.pd-info-card dl dt {
+    float: left;
+    clear: left;
+    width: 80px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+.pd-info-card dl dd {
+    margin-left: 80px;
+    margin-bottom: 0.5rem;
+    color: #e1e8ed;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+.pd-tags {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Main content */
+.project-main {
+    min-width: 0;
+}
+
+.pd-hero {
+    background: rgba(255,255,255,0.02);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.pd-hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.pd-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.pd-gallery .thumb {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+.pd-gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sections */
+.pd-section {
+    margin-bottom: 2rem;
+    color: #d1d9df;
+}
+
+.pd-section h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+/* taille et comportement des SVG dans les boutons */
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    display: inline-block;
+}
+
+/* Optionnel : couleur icône si besoin (hérite de la couleur du bouton) */
+.btn-primary .btn-icon { color: #fff; stroke: currentColor; fill: none; }
+.btn-secondary .btn-icon { color: inherit; fill: currentColor; stroke: none; }
+
+/* Responsive */
+@media (max-width: 980px) {
+    .project-layout {
+        grid-template-columns: 1fr;
+    }
+    .project-aside {
+        position: relative;
+        top: 0;
+        margin-bottom: 1.5rem;
+    }
+    .pd-hero img {
+        height: 260px;
+    }
+    .pd-gallery img {
+        height: 80px;
+    }
+}

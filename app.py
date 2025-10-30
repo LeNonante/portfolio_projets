@@ -1,4 +1,5 @@
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, redirect, render_template, url_for, request
+from urllib.parse import urljoin, urlparse
 from flask_babel import Babel, gettext as _
 import json 
 app = Flask(__name__)
@@ -27,18 +28,32 @@ def inject_projects():
         'current_lang': get_locale()
     }
 
+def is_safe_url(target):
+    host_url = request.host_url
+    ref_url = urlparse(host_url)
+    test_url = urlparse(urljoin(host_url, target))
+    return test_url.scheme in ('http', 'https') and ref_url.netloc == test_url.netloc
 
 @app.route('/')
 def index():
-    print(load_json_from_static())
-    # Exemple de données pour les projets
     return render_template('index.html')
+
+@app.route('/<project_id>')
+def project(project_id):
+    return render_template('project_detail.html', id=int(project_id))
 
 @app.route('/switchlanguage')
 def switchlanguage():
     global langue
     langue = 'en' if langue == 'fr' else 'fr'
-    return redirect(url_for('index'))
+    
+    # récupère la page de retour fournie par le template
+    next_url = request.args.get('next') or url_for('index')
+    
+    # sécurité : n'autorise que les redirections internes
+    if not is_safe_url(next_url):
+        next_url = url_for('index')
+    return redirect(next_url)
 
 
 if __name__ == '__main__':

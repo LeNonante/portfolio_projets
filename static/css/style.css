@@ -5,7 +5,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: #0f1419;
     color: #e1e8ed;
@@ -125,7 +132,7 @@ a {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 0 6rem;
+    padding: 8rem 0 3rem;
     text-align: center;
 }
 
@@ -157,7 +164,7 @@ a {
 
 /* Work Section */
 .work-section {
-    padding: 4rem 0 6rem;
+    padding: 0 0 6rem;
 }
 
 .section-title {
@@ -246,6 +253,10 @@ a {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3rem 0 2rem;
     margin-top: 4rem;
+    flex-shrink: 0;
+    position: relative; /* retire tout position: fixed/absolute existant */
+    bottom: auto;
+    width: 100%;
 }
 
 .footer .container {
