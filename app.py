@@ -38,10 +38,8 @@ def is_safe_url(target):
 def index():
     return render_template('index.html')
 
-@app.route('/<project_id>')
+@app.route('/<int:project_id>')
 def project(project_id):
-    if not project_id.isdigit():
-        return "Invalid project id", 404
     return render_template('project_detail.html', id=int(project_id))
 
 @app.route('/switchlanguage')
