@@ -1,0 +1,52 @@
+# French translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR aurelien.musset54@gmail.com, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-10-30 09:33+0000\n"
+"PO-Revision-Date: 2025-10-30 09:34+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:20 templates/index.html:81
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/index.html:21 templates/index.html:83
+msgid "Resume"
+msgstr "CV"
+
+#: templates/index.html:22 templates/index.html:84
+msgid "Contact"
+msgstr "Me contacter"
+
+#: templates/index.html:36
+msgid "Title"
+msgstr "Titre"
+
+#: templates/index.html:37
+msgid "Subtitle"
+msgstr "Soustitre"
+
+#: templates/index.html:44
+msgid "My Work"
+msgstr "Mon travail"
+
+#: templates/index.html:82
+msgid "About"
+msgstr "A propos de moi"
+
+#: templates/index.html:103
+msgid "Copyright"
+msgstr "Tous droits réservés."
+

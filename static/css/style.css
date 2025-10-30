@@ -40,6 +40,32 @@ a {
     align-items: center;
 }
 
+/* Nouvelle zone d'actions dans la nav (langue + bouton) */
+.nav-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+/* Bouton visuel pour changer la langue (sans logique) */
+.lang-toggle {
+    background: rgba(255,255,255,0.03);
+    color: #9ca3af;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.12s ease;
+    font-size: 0.95rem;
+}
+
+.lang-toggle:hover {
+    background: rgba(59,130,246,0.08);
+    color: #e1e8ed;
+    transform: translateY(-2px);
+}
+
 .nav-brand {
     display: flex;
     align-items: center;
