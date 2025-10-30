@@ -40,6 +40,8 @@ def index():
 
 @app.route('/<project_id>')
 def project(project_id):
+    if not project_id.isdigit():
+        return "Invalid project id", 404
     return render_template('project_detail.html', id=int(project_id))
 
 @app.route('/switchlanguage')
