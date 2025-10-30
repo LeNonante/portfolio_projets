@@ -1,6 +1,6 @@
 from flask import Flask, redirect, render_template, url_for
 from flask_babel import Babel, gettext as _
-    
+import json 
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
@@ -11,21 +11,28 @@ def get_locale():
 
 babel = Babel(app, locale_selector=get_locale)
 
+def load_json_from_static(filename='static/projects.json'):
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+@app.context_processor
+def inject_projects():
+    # injecter les projets chargés depuis le fichier JSON dans tous les templates
+    return {
+        'projects': load_json_from_static(),
+        'current_lang': get_locale()
+    }
 
 
 @app.route('/')
 def index():
+    print(load_json_from_static())
     # Exemple de données pour les projets
-    projects = [
-        {
-            'name': 'E-commerce Platform Redesign',
-            'description': 'A complete UX/UI overhaul for an online retail client, boosting conversion rates by 15%.',
-            'image': '/static/images/ecommerce.jpg',
-            'tags': ['React', 'Figma', 'Node.js']
-        }
-    ]
-    
-    return render_template('index.html', projects=projects)
+    return render_template('index.html')
 
 @app.route('/switchlanguage')
 def switchlanguage():

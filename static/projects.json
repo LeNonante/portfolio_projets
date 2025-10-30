@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "fr": {
+            "title": "Projet Exemple",
+            "description": "Ceci est une description d'exemple pour un projet."
+        },
+        "en": {
+            "title": "Example Project",
+            "description": "This is a sample description for a project."
+        },
+        "tags": ["Flask", "JavaScript", "CSS"],
+        "image": "/static/projects/1/img.png"
+    },
+    {
+        "id": "2",
+        "fr": {
+            "title": "Deuxième Projet",
+            "description": "Description du deuxième projet en français."
+        },
+        "en": {
+            "title": "Second Project",
+            "description": "Description of the second project in English."
+        },
+        "tags": ["Flask", "JavaScript", "CSS"],
+        "image": "/static/projects/1/img.png"
+    }
+
+
+]

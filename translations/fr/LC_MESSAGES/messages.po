@@ -32,15 +32,15 @@ msgstr "Me contacter"
 
 #: templates/index.html:36
 msgid "Title"
-msgstr "Titre"
+msgstr "Ingénieur..."
 
 #: templates/index.html:37
 msgid "Subtitle"
-msgstr "Soustitre"
+msgstr "Je sais pas..."
 
 #: templates/index.html:44
 msgid "My Work"
-msgstr "Mon travail"
+msgstr "Mes projets"
 
 #: templates/index.html:82
 msgid "About"
