@@ -170,10 +170,16 @@ a {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
     text-align: left;
 }
 
+.section-subtitle {
+    font-size: 1.20rem;
+    color: #9ca3af;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    text-align: left;
+}
 /* Projects Grid */
 .projects-grid {
     display: grid;

@@ -1,0 +1,21 @@
+/* Styles for contact page */
+:root{ --accent: #3b82f6; --muted:#9ca3af }
+
+.contact-main{ padding:3rem 0 }
+.contact-header h1{ font-size:1.6rem; margin:0 0 0.25rem 0; color:#fff }
+.contact-sub{ color:var(--muted); margin-bottom:1rem }
+
+.contact-grid{ display:grid; grid-template-columns: 1fr 320px; gap:1.25rem }
+.contact-form-card{ background: rgba(255,255,255,0.02); padding:1rem; border-radius:0.6rem; border:1px solid rgba(255,255,255,0.03) }
+.contact-info-card{ background: rgba(255,255,255,0.01); padding:1rem; border-radius:0.6rem; border:1px solid rgba(255,255,255,0.03) }
+
+.contact-form label{ display:block; margin:0.5rem 0 0.25rem }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{ width:100%; padding:0.6rem; border-radius:0.4rem; border:1px solid rgba(255,255,255,0.04); background:transparent; color:#e6eef6 }
+.contact-form textarea{ resize:vertical }
+.contact-form .btn-primary{ margin-top:0.75rem; width:fit-content }
+
+.alert{ padding:0.6rem 0.8rem; border-radius:0.4rem; margin-bottom:0.75rem }
+.alert-error{ background: rgba(220,38,38,0.08); color:#ffb4b4; border:1px solid rgba(220,38,38,0.12) }
+.alert-success{ background: rgba(16,185,129,0.06); color:#bbf7d0; border:1px solid rgba(16,185,129,0.12) }
+
+@media (max-width:900px){ .contact-grid{ grid-template-columns: 1fr } }
