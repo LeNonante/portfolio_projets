@@ -32,10 +32,9 @@ else :
 
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
-langue='fr'
 def get_locale():
     # Utilise la langue choisie par l'utilisateur (stockée en session)
-    return langue
+    return session.get('lang', 'fr')
 
 babel = Babel(app, locale_selector=get_locale)
 
@@ -71,8 +70,7 @@ def project(project_id):
 
 @app.route('/switchlanguage')
 def switchlanguage():
-    global langue
-    langue = 'en' if langue == 'fr' else 'fr'
+    session['lang'] = 'en' if session.get('lang', 'fr') == 'fr' else 'fr'
     
     # récupère la page de retour fournie par le template
     next_url = request.args.get('next') or url_for('index')
