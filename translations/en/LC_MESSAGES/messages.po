@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-31 21:30+0100\n"
+"POT-Creation-Date: 2025-10-31 22:13+0100\n"
 "PO-Revision-Date: 2025-10-30 09:34+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,21 +18,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
+#: app.py:151
+msgid "Veuillez remplir tous les champs."
+msgstr "Please fill in all fields."
 
-#: templates/cv.html:20 templates/index.html:20 templates/index.html:74
-#: templates/project_detail.html:20
+#: app.py:161
+msgid "Message envoyé — merci !"
+msgstr "Message sent, thank you!"
+
+#: app.py:163
+msgid "Une erreur est survenue lors de l'enregistrement."
+msgstr "An error occurred while saving."
+
+#: templates/contact.html:6 templates/contact.html:22 templates/contact.html:36
+#: templates/contact.html:80 templates/cv.html:22 templates/cv.html:153
+#: templates/index.html:22 templates/index.html:76
+#: templates/project_detail.html:22 templates/project_detail.html:102
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/contact.html:20 templates/contact.html:78 templates/cv.html:20
+#: templates/cv.html:151 templates/index.html:20 templates/index.html:74
+#: templates/project_detail.html:20 templates/project_detail.html:100
 msgid "Home"
 msgstr "Home"
 
-#: templates/cv.html:21 templates/index.html:21 templates/index.html:76
-#: templates/project_detail.html:21
+#: templates/contact.html:21 templates/cv.html:6
+msgid "CV"
+msgstr ""
+
+#: templates/contact.html:37
+msgid "Tu peux me laisser un message ici — je te répondrai dès que possible."
+msgstr "You can leave me a message here. I’ll get back to you as soon as possible."
+
+#: templates/contact.html:50
+msgid "Name"
+msgstr "Name"
+
+#: templates/contact.html:53 templates/contact.html:65
+msgid "Email"
+msgstr "Email"
+
+#: templates/contact.html:56
+msgid "Message"
+msgstr "Message"
+
+#: templates/contact.html:59
+msgid "Send message"
+msgstr "Send a message"
+
+#: templates/contact.html:64
+#, fuzzy
+msgid "Contact details"
+msgstr "Contact details"
+
+#: templates/contact.html:66
+msgid "Tel."
+msgstr "Tel."
+
+#: templates/contact.html:68
+msgid ""
+"You can also find me on GitHub or LinkedIn : links in the footer or on "
+"the homepage."
+msgstr ""
+"You can also find me on GitHub or LinkedIn : links in the footer or on "
+"the homepage"
+
+#: templates/contact.html:79 templates/cv.html:21 templates/cv.html:152
+#: templates/index.html:21 templates/index.html:75
+#: templates/project_detail.html:21 templates/project_detail.html:101
 msgid "Resume"
 msgstr "Resume"
 
-#: templates/cv.html:22 templates/index.html:22 templates/index.html:77
-#: templates/project_detail.html:22
-msgid "Contact"
-msgstr "Contact"
+#: templates/contact.html:99 templates/cv.html:172 templates/index.html:95
+#: templates/project_detail.html:121
+msgid "Copyright"
+msgstr "All rights reserved"
 
 #: templates/cv.html:36
 msgid "Curriculum Vitae"
@@ -78,11 +139,6 @@ msgstr "Associations & volunteering"
 msgid "No association entries yet."
 msgstr "No association entries yet."
 
-#: templates/cv.html:149 templates/index.html:96
-#: templates/project_detail.html:98
-msgid "Copyright"
-msgstr "All rights reserved"
-
 #: templates/index.html:38
 msgid "Title"
 msgstr "Engineer..."
@@ -95,9 +151,9 @@ msgstr "I don't know..."
 msgid "My Work"
 msgstr "My Projects"
 
-#: templates/index.html:75
-msgid "About"
-msgstr "About"
+#: templates/index.html:47
+msgid "You can click"
+msgstr "Select a project for more details."
 
 #: templates/project_detail.html:45
 msgid "View Live Project"
@@ -118,4 +174,7 @@ msgstr "Technology stack"
 #: templates/project_detail.html:72
 msgid "Back to All Projects"
 msgstr "Back to All Projects"
+
+#~ msgid "About"
+#~ msgstr "About"
 

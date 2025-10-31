@@ -122,5 +122,48 @@ def cv():
     return render_template('cv.html', experiences=experiences)
 
 
+def save_contact_to_static(entry, filename='static/contacts.json'):
+    """Ajoute une entrée de contact à static/contacts.json (crée le fichier si absent)."""
+    try:
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        else:
+            data = []
+    except (json.JSONDecodeError, FileNotFoundError):
+        data = []
+
+    data.append(entry)
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    error = None
+    success = None
+    if request.method == 'POST':
+        name = (request.form.get('name') or '').strip()
+        email = (request.form.get('email') or '').strip()
+        message = (request.form.get('message') or '').strip()
+
+        if not name or not email or not message:
+            error = _('Veuillez remplir tous les champs.')
+        else:
+            entry = {
+                'name': name,
+                'email': email,
+                'message': message,
+                'path': request.path
+            }
+            try:
+                save_contact_to_static(entry)
+                success = _('Message envoyé — merci !')
+            except Exception as e:
+                error = _('Une erreur est survenue lors de l\'enregistrement.')
+
+    return render_template('contact.html', error=error, success=success)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)

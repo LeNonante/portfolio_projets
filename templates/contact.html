@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurélien Musset</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ _('Contact') }} — Aurélien Musset</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -18,56 +18,60 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="{{ url_for('index') }}" class="nav-link">{{ _('Home') }}</a></li>
-                <li><a href="{{ url_for('cv') }}" class="nav-link">{{ _('Resume') }}</a></li>
+                <li><a href="{{ url_for('cv') }}" class="nav-link">{{ _('CV') }}</a></li>
                 <li><a href="{{ url_for('contact') }}" class="nav-link">{{ _('Contact') }}</a></li>
             </ul>
 
-            <!-- Ajout : zone d'actions (bouton langue + CTA) -->
             <div class="nav-actions">
-                <!--bascule FR/EN -->
-                <a href="{{ url_for('switchlanguage') }}">
+                <a href="{{ url_for('switchlanguage', next=request.full_path) }}">
                     <button class="lang-toggle" aria-label="Changer la langue">FR / EN</button>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">{{ _('Title') }}</h1>
-            <p class="hero-subtitle">{{ _('Subtitle') }}</p>
-        </div>
-    </section>
+    <main class="contact-main">
+        <div class="container contact-container">
+            <header class="contact-header">
+                <h1>{{ _('Contact') }}</h1>
+                <p class="contact-sub">{{ _('Tu peux me laisser un message ici — je te répondrai dès que possible.') }}</p>
+            </header>
 
-    <!-- Selected Work Section -->
-    <section class="work-section">
-        <div class="container">
-            <h2 class="section-title">{{ _('My Work') }}</h2>
-            <p class="section-subtitle">{{ _('You can click') }}</p>
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                {% for project in projects %}
-                <div class="project-card" onclick="selectProject({{ project.id }})">
-                    <div class="project-image">
-                        <img src="{{ project.image }}" alt="{{ project[current_lang].title }}">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">{{ project[current_lang].title }}</h3>
-                        <p class="project-description">{{ project[current_lang].description }}</p>
-                        <div class="project-tags">
-                            {% for tag in project.tags %}
-                            <span class="tag">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+            <div class="contact-grid">
+                <section class="contact-form-card">
+                    {% if error %}
+                        <div class="alert alert-error">{{ error }}</div>
+                    {% endif %}
+                    {% if success %}
+                        <div class="alert alert-success">{{ success }}</div>
+                    {% endif %}
+
+                    <form method="post" action="{{ url_for('contact') }}" class="contact-form">
+                        <label for="name">{{ _('Name') }}</label>
+                        <input id="name" name="name" type="text" required>
+
+                        <label for="email">{{ _('Email') }}</label>
+                        <input id="email" name="email" type="email" required>
+
+                        <label for="message">{{ _('Message') }}</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit" class="btn-primary">{{ _('Send message') }}</button>
+                    </form>
+                </section>
+
+                <aside class="contact-info-card">
+                    <h3>{{ _('Contact details') }}</h3>
+                    <p class="contact-detail">{{ _('Email') }}: <a href="mailto:musset.aurelien.54@gmail.com">musset.aurelien.54@gmail.com</a></p>
+                    <p class="contact-detail">{{ _('Tel.') }}: <a href="tel:+33750962097">+33 7 50 96 20 97</a></p>
+                    <hr>
+                    <p>{{ _('You can also find me on GitHub or LinkedIn : links in the footer or on the homepage.') }}</p>
+                </aside>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <nav class="footer-nav">
@@ -95,10 +99,5 @@
             <p class="copyright">© 2025 Aurélien Musset. {{ _('Copyright') }}</p>
         </div>
     </footer>
-    <script>
-            function selectProject(ProjectId) {
-            window.location.href = `/${ProjectId}`;
-        }
-    </script>
 </body>
 </html>
