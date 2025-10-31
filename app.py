@@ -1,8 +1,35 @@
-from flask import Flask, redirect, render_template, url_for, request
+from flask import Flask, redirect, render_template, url_for, request, session
+from dotenv import load_dotenv, set_key, dotenv_values
 from urllib.parse import urljoin, urlparse
 from flask_babel import Babel, gettext as _
 import json 
+import os
 app = Flask(__name__)
+
+chemin_env="static/.env"
+
+def isThereASecretKey() :
+    vals = dotenv_values(chemin_env)
+    return bool(vals.get("SECRET_KEY", ""))
+
+def setSecretKey(key) :
+    #Enregistrement de la clef secrete
+    load_dotenv(chemin_env) #Ouverture du .env
+    set_key(chemin_env, "SECRET_KEY", key) #on enregistre
+
+def getSecretKey() :
+    vals = dotenv_values(chemin_env)
+    return vals.get("SECRET_KEY", "")
+
+if not isThereASecretKey(): #Si pas de clef secrete (utilisée pour les sessions)
+    # Générer une clé secrète aléatoire et la stocker dans le .env
+    secret_key = os.urandom(24).hex()
+    setSecretKey(secret_key)#Enregistrer la clef dans le .env
+    app.secret_key=secret_key #Enregistrer la clef dans l'app
+else :
+    app.secret_key=getSecretKey() #Lire la clef dans le .env et l'enregistrer dans l'app
+
+
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
 langue='fr'
