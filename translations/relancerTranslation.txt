@@ -1,0 +1,9 @@
+# 1. Ré-extraction
+pybabel extract -F babel.cfg -o messages.pot .
+
+# 2. Mise à jour des fichiers .po
+pybabel update -i messages.pot -d translations
+
+# 3. Complète les nouvelles lignes dans les .po
+# 4. Recompile
+pybabel compile -d translations

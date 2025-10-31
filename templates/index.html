@@ -17,8 +17,8 @@
                 <span class="brand-name">Aurélien Musset</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">{{ _('Home') }}</a></li>
-                <li><a href="#resume" class="nav-link">{{ _('Resume') }}</a></li>
+                <li><a href="{{ url_for('index') }}" class="nav-link">{{ _('Home') }}</a></li>
+                <li><a href="{{ url_for('cv') }}" class="nav-link">{{ _('Resume') }}</a></li>
                 <li><a href="#contact" class="nav-link">{{ _('Contact') }}</a></li>
             </ul>
 

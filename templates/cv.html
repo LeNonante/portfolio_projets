@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ _('CV') }} — Aurélien Musset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cv.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span class="brand-name">Aurélien Musset</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" class="nav-link">{{ _('Home') }}</a></li>
+                <li><a href="{{ url_for('cv') }}" class="nav-link">{{ _('Resume') }}</a></li>
+                <li><a href="#contact" class="nav-link">{{ _('Contact') }}</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="{{ url_for('switchlanguage', next=request.full_path) }}">
+                    <button class="lang-toggle" aria-label="Changer la langue">FR / EN</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cv-main">
+        <div class="container cv-container">
+            <header class="cv-header">
+                <h1>{{ _('Curriculum Vitae') }}</h1>
+                <p class="cv-sub">{{ _('Expériences professionnelles, formation et engagements associatifs') }}</p>
+            </header>
+
+            <!-- Barre de filtres -->
+            <div class="filter-bar" role="tablist" aria-label="Filtrer les expériences">
+                <button class="filter-btn active" data-filter="all">{{ _('All') }}</button>
+                <button class="filter-btn" data-filter="pro">{{ _('Professional') }}</button>
+                <button class="filter-btn" data-filter="education">{{ _('Education') }}</button>
+                <button class="filter-btn" data-filter="asso">{{ _('Associations') }}</button>
+            </div>
+
+            <!-- Sections groupées par type -->
+            <section class="cv-section" id="professional">
+                <h2 class="section-title">{{ _('Professional experience') }}</h2>
+                <div class="cv-list">
+                    {% for exp in experiences|selectattr('type','equalto','pro')|list %}
+                    <article class="experience">
+                        <div class="exp-left">
+                            {% if exp.image %}
+                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            {% else %}
+                            <div class="exp-image placeholder"></div>
+                            {% endif %}
+                            <div class="exp-dates">
+                                <span class="start">{{ exp.start }}</span>
+                                <span class="sep">—</span>
+                                <span class="end">{{ exp.end }}</span>
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <div class="exp-meta">
+                                <span class="exp-org">{{ exp.organisation }}</span>
+                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                            </div>
+                            <div class="exp-desc">{{ exp.description }}</div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <p class="empty-msg">{{ _('No professional experiences yet.') }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="cv-section" id="education">
+                <h2 class="section-title">{{ _('Education') }}</h2>
+                <div class="cv-list">
+                    {% for exp in experiences|selectattr('type','equalto','education')|list %}
+                    <article class="experience">
+                        <div class="exp-left">
+                            {% if exp.image %}
+                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            {% else %}
+                            <div class="exp-image placeholder"></div>
+                            {% endif %}
+                            <div class="exp-dates">
+                                <span class="start">{{ exp.start }}</span>
+                                <span class="sep">—</span>
+                                <span class="end">{{ exp.end }}</span>
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <div class="exp-meta">
+                                <span class="exp-org">{{ exp.organisation }}</span>
+                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                            </div>
+                            <div class="exp-desc">{{ exp.description }}</div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <p class="empty-msg">{{ _('No education entries yet.') }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="cv-section" id="associations">
+                <h2 class="section-title">{{ _('Associations & volunteering') }}</h2>
+                <div class="cv-list">
+                    {% for exp in experiences|selectattr('type','equalto','asso')|list %}
+                    <article class="experience">
+                        <div class="exp-left">
+                            {% if exp.image %}
+                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            {% else %}
+                            <div class="exp-image placeholder"></div>
+                            {% endif %}
+                            <div class="exp-dates">
+                                <span class="start">{{ exp.start }}</span>
+                                <span class="sep">—</span>
+                                <span class="end">{{ exp.end }}</span>
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <div class="exp-meta">
+                                <span class="exp-org">{{ exp.organisation }}</span>
+                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                            </div>
+                            <div class="exp-desc">{{ exp.description }}</div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <p class="empty-msg">{{ _('No association entries yet.') }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© 2025 Aurélien Musset. {{ _('Copyright') }}</p>
+        </div>
+    </footer>
+    <script>
+        // Filtre simple : affiche/masque les sections en fonction du data-filter
+        (function(){
+            const buttons = document.querySelectorAll('.filter-bar .filter-btn');
+            const sections = {
+                all: document.querySelectorAll('.cv-section'),
+                pro: document.querySelector('#professional'),
+                education: document.querySelector('#education'),
+                asso: document.querySelector('#associations')
+            };
+
+            function setActive(btn){
+                buttons.forEach(b=>b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+
+            function showFilter(filter){
+                if(filter === 'all'){
+                    document.querySelectorAll('.cv-section').forEach(s=> s.classList.remove('hidden'));
+                    return;
+                }
+                // masquer toutes
+                document.querySelectorAll('.cv-section').forEach(s=> s.classList.add('hidden'));
+                // afficher la section correspondante
+                const sel = sections[filter];
+                if(sel) sel.classList.remove('hidden');
+            }
+
+            buttons.forEach(btn=>{
+                btn.addEventListener('click', function(){
+                    const filter = this.dataset.filter;
+                    setActive(this);
+                    showFilter(filter);
+                });
+            });
+
+            // Au chargement, ensure all visible
+            document.addEventListener('DOMContentLoaded', ()=> showFilter('all'));
+        })();
+    </script>
+</body>
+</html>

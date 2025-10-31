@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-30 21:07+0100\n"
+"POT-Creation-Date: 2025-10-31 21:30+0100\n"
 "PO-Revision-Date: 2025-10-30 09:34+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,19 +18,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/index.html:20 templates/index.html:74
+
+#: templates/cv.html:20 templates/index.html:20 templates/index.html:74
 #: templates/project_detail.html:20
 msgid "Home"
 msgstr "Home"
 
-#: templates/index.html:21 templates/index.html:76
+#: templates/cv.html:21 templates/index.html:21 templates/index.html:76
+#: templates/project_detail.html:21
 msgid "Resume"
 msgstr "Resume"
 
-#: templates/index.html:22 templates/index.html:77
-#: templates/project_detail.html:21
+#: templates/cv.html:22 templates/index.html:22 templates/index.html:77
+#: templates/project_detail.html:22
 msgid "Contact"
 msgstr "Contact"
+
+#: templates/cv.html:36
+msgid "Curriculum Vitae"
+msgstr "Resume"
+
+#: templates/cv.html:37
+msgid "Expériences professionnelles, formation et engagements associatifs"
+msgstr "Professional experience, education, and community involvement"
+
+#: templates/cv.html:42
+msgid "All"
+msgstr "All"
+
+#: templates/cv.html:43
+msgid "Professional"
+msgstr "Professional"
+
+#: templates/cv.html:44 templates/cv.html:82
+msgid "Education"
+msgstr "Education"
+
+#: templates/cv.html:45
+msgid "Associations"
+msgstr "Associations"
+
+#: templates/cv.html:50
+msgid "Professional experience"
+msgstr "Professional experience"
+
+#: templates/cv.html:76
+msgid "No professional experiences yet."
+msgstr "No professional experiences yet."
+
+#: templates/cv.html:108
+msgid "No education entries yet."
+msgstr "No education entries yet."
+
+#: templates/cv.html:114
+msgid "Associations & volunteering"
+msgstr "Associations & volunteering"
+
+#: templates/cv.html:140
+msgid "No association entries yet."
+msgstr "No association entries yet."
+
+#: templates/cv.html:149 templates/index.html:96
+#: templates/project_detail.html:98
+msgid "Copyright"
+msgstr "All rights reserved"
 
 #: templates/index.html:38
 msgid "Title"
@@ -48,27 +99,23 @@ msgstr "My Projects"
 msgid "About"
 msgstr "About"
 
-#: templates/index.html:96 templates/project_detail.html:92
-msgid "Copyright"
-msgstr "All rights reserved"
-
-#: templates/project_detail.html:41
+#: templates/project_detail.html:45
 msgid "View Live Project"
 msgstr "View Live Project"
 
-#: templates/project_detail.html:44
+#: templates/project_detail.html:51
 msgid "View on GitHub"
 msgstr "View on GitHub"
 
-#: templates/project_detail.html:49
+#: templates/project_detail.html:56
 msgid "Project info"
 msgstr "Project information"
 
-#: templates/project_detail.html:55
+#: templates/project_detail.html:62
 msgid "Technology stack"
 msgstr "Technology stack"
 
-#: templates/project_detail.html:65
+#: templates/project_detail.html:72
 msgid "Back to All Projects"
 msgstr "Back to All Projects"
 

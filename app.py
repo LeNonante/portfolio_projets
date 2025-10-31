@@ -84,5 +84,43 @@ def switchlanguage():
     return redirect(next_url)
 
 
+def load_experiences_from_static(filename='static/experiences.json'):
+    """Charge la liste d'expériences depuis static/experiences.json si présent, sinon retourne une liste d'exemples."""
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        # Exemples simples — tu pourras les remplacer par un fichier JSON dans static/
+        return [
+            {
+                "image": url_for('static', filename='projects/1/cover.jpg'),
+                "start": "2023-09",
+                "end": "2025-06",
+                "title": "Ingénieur Développement",
+                "organisation": "Entreprise Exemple",
+                "location": "Paris, France",
+                "description": "Travail sur des applications web en Python/Flask, conception d'APIs et mise en place de tests.",
+                "type": "pro"
+            },
+            {
+                "image": url_for('static', filename='projects/1/cover.jpg'),
+                "start": "2019-09",
+                "end": "2023-06",
+                "title": "Licence Informatique",
+                "organisation": "Université Exemple",
+                "location": "Lyon, France",
+                "description": "Parcours orienté développement logiciel et systèmes.",
+                "type": "education"
+            }
+        ]
+
+
+@app.route('/cv')
+def cv():
+    # Charger les expériences (fichier static/experiences.json facultatif)
+    experiences = load_experiences_from_static()
+    return render_template('cv.html', experiences=experiences)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)
