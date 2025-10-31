@@ -3,6 +3,7 @@ from dotenv import load_dotenv, set_key, dotenv_values
 from urllib.parse import urljoin, urlparse
 from flask_babel import Babel, gettext as _
 import json 
+import markdown
 import os
 app = Flask(__name__)
 
@@ -66,7 +67,9 @@ def index():
 
 @app.route('/<int:project_id>')
 def project(project_id):
-    return render_template('project_detail.html', id=int(project_id))
+    with open(load_json_from_static()[project_id-1]['details']+f"_{get_locale()}.md", encoding='utf-8') as details_file:
+            details_md = details_file.read()
+    return render_template('project_detail.html', id=int(project_id), details_md=markdown.markdown(details_md))
 
 @app.route('/switchlanguage')
 def switchlanguage():

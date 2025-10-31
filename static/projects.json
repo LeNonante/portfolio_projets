@@ -22,7 +22,8 @@
         "tags": ["Flask", "JavaScript", "CSS", "PostgreSQL", "Docker"],
         "image": "/static/projects/1/img.png",
         "live_url": "https://gamehub.lenonante.qzz.io",
-        "github_url": "https://github.com/LeNonante/GameHub"
+        "github_url": "https://github.com/LeNonante/GameHub",
+        "details": "static/projects/1/details"
     }
 
 

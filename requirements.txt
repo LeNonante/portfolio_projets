@@ -2,3 +2,4 @@ flask
 flask-babel
 gunicorn
 dotenv
+markdown
