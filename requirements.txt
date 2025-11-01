@@ -1,5 +1,5 @@
 flask
 flask-babel
 gunicorn
-dotenv
+python-dotenv
 markdown
