@@ -91,30 +91,8 @@ def load_experiences_from_static(filename='static/experiences.json'):
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         # Exemples simples — tu pourras les remplacer par un fichier JSON dans static/
-        return [
-            {
-                "image": url_for('static', filename='projects/1/cover.jpg'),
-                "start": "2023-09",
-                "end": "2025-06",
-                "title": "Ingénieur Développement",
-                "organisation": "Entreprise Exemple",
-                "location": "Paris, France",
-                "description": "Travail sur des applications web en Python/Flask, conception d'APIs et mise en place de tests.",
-                "type": "pro"
-            },
-            {
-                "image": url_for('static', filename='projects/1/cover.jpg'),
-                "start": "2019-09",
-                "end": "2023-06",
-                "title": "Licence Informatique",
-                "organisation": "Université Exemple",
-                "location": "Lyon, France",
-                "description": "Parcours orienté développement logiciel et systèmes.",
-                "type": "education"
-            }
-        ]
-
-
+        return []
+    
 @app.route('/cv')
 def cv():
     # Charger les expériences (fichier static/experiences.json facultatif)
