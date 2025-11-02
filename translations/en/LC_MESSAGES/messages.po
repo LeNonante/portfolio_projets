@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-31 22:13+0100\n"
+"POT-Creation-Date: 2025-11-02 15:18+0100\n"
 "PO-Revision-Date: 2025-10-30 09:34+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: app.py:151
+#: app.py:129
 msgid "Veuillez remplir tous les champs."
 msgstr "Please fill in all fields."
 
-#: app.py:161
+#: app.py:139
 msgid "Message envoyé — merci !"
 msgstr "Message sent, thank you!"
 
-#: app.py:163
+#: app.py:141
 msgid "Une erreur est survenue lors de l'enregistrement."
 msgstr "An error occurred while saving."
 
@@ -153,7 +153,7 @@ msgstr "My Projects"
 
 #: templates/index.html:47
 msgid "You can click"
-msgstr "Select a project for more details."
+msgstr "Select a project for more details and to access a demo or its code on GitHub."
 
 #: templates/project_detail.html:45
 msgid "View Live Project"

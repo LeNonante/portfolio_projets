@@ -53,23 +53,23 @@
                     <article class="experience">
                         <div class="exp-left">
                             {% if exp.image %}
-                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            <img src="{{ exp.image }}" alt="{{ exp[current_lang].title }}" class="exp-image">
                             {% else %}
                             <div class="exp-image placeholder"></div>
                             {% endif %}
                             <div class="exp-dates">
-                                <span class="start">{{ exp.start }}</span>
-                                <span class="sep">—</span>
-                                <span class="end">{{ exp.end }}</span>
+                                <span class="start">{{ exp[current_lang].start }}</span>
+                                <span class="sep">-</span>
+                                <span class="end">{{ exp[current_lang].end }}</span>
                             </div>
                         </div>
                         <div class="exp-right">
-                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <h3 class="exp-title">{{ exp[current_lang].title }}</h3>
                             <div class="exp-meta">
-                                <span class="exp-org">{{ exp.organisation }}</span>
-                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                                <span class="exp-org">{{ exp[current_lang].organisation }}</span>
+                                {% if exp[current_lang].location %}<span class="exp-loc">· {{ exp[current_lang].location }}</span>{% endif %}
                             </div>
-                            <div class="exp-desc">{{ exp.description }}</div>
+                            <div class="exp-desc">{{ exp[current_lang].description }}</div>
                         </div>
                     </article>
                     {% else %}
@@ -85,23 +85,23 @@
                     <article class="experience">
                         <div class="exp-left">
                             {% if exp.image %}
-                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            <img src="{{ exp.image }}" alt="{{ exp[current_lang].title }}" class="exp-image">
                             {% else %}
                             <div class="exp-image placeholder"></div>
                             {% endif %}
                             <div class="exp-dates">
-                                <span class="start">{{ exp.start }}</span>
-                                <span class="sep">—</span>
-                                <span class="end">{{ exp.end }}</span>
+                                <span class="start">{{ exp[current_lang].start }}</span>
+                                <span class="sep">-</span>
+                                <span class="end">{{ exp[current_lang].end }}</span>
                             </div>
                         </div>
                         <div class="exp-right">
-                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <h3 class="exp-title">{{ exp[current_lang].title }}</h3>
                             <div class="exp-meta">
-                                <span class="exp-org">{{ exp.organisation }}</span>
-                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                                <span class="exp-org">{{ exp[current_lang].organisation }}</span>
+                                {% if exp[current_lang].location %}<span class="exp-loc">· {{ exp[current_lang].location }}</span>{% endif %}
                             </div>
-                            <div class="exp-desc">{{ exp.description }}</div>
+                            <div class="exp-desc">{{ exp[current_lang].description }}</div>
                         </div>
                     </article>
                     {% else %}
@@ -117,23 +117,23 @@
                     <article class="experience">
                         <div class="exp-left">
                             {% if exp.image %}
-                            <img src="{{ exp.image }}" alt="{{ exp.title }}" class="exp-image">
+                            <img src="{{ exp.image }}" alt="{{ exp[current_lang].title }}" class="exp-image">
                             {% else %}
                             <div class="exp-image placeholder"></div>
                             {% endif %}
                             <div class="exp-dates">
-                                <span class="start">{{ exp.start }}</span>
-                                <span class="sep">—</span>
-                                <span class="end">{{ exp.end }}</span>
+                                <span class="start">{{ exp[current_lang].start }}</span>
+                                <span class="sep">-</span>
+                                <span class="end">{{ exp[current_lang].end }}</span>
                             </div>
                         </div>
                         <div class="exp-right">
-                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <h3 class="exp-title">{{ exp[current_lang].title }}</h3>
                             <div class="exp-meta">
-                                <span class="exp-org">{{ exp.organisation }}</span>
-                                {% if exp.location %}<span class="exp-loc">· {{ exp.location }}</span>{% endif %}
+                                <span class="exp-org">{{ exp[current_lang].organisation }}</span>
+                                {% if exp[current_lang].location %}<span class="exp-loc">· {{ exp[current_lang].location }}</span>{% endif %}
                             </div>
-                            <div class="exp-desc">{{ exp.description }}</div>
+                            <div class="exp-desc">{{ exp[current_lang].description }}</div>
                         </div>
                     </article>
                     {% else %}

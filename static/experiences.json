@@ -1,24 +1,84 @@
 [
     {
-        "image": "static/projects/1/cover.jpg",
-        "start": "2023-09",
-        "end": "2025-06",
-        "title": "Ingénieur Développement",
-        "organisation": "Entreprise Exemple",
-        "location": "Paris, France",
-        "description": "Travail sur des applications web en Python/Flask, conception d'APIs et mise en place de tests.",
-        "type": "pro"
+        "image": "static/resume/1/img.png",
+        "fr" : {
+            "start": "2024",
+            "end": "2027",
+            "title": "Cycle ingénieur en informatique",
+            "organisation": "Univesité de Technologie de Troyes",
+            "location": "Troyes, France",
+            "description": "Développement de compétences qui permettent de passer de la donnée brute à de l’information actionnable tout en développant un regard critique sur les techniques utilisées."
+        },
+        "en" : {
+            "start": "2024",
+            "end": "2027",
+            "title": "Engineering Degree in Computer Science",
+            "organisation": "University of Technology of Troyes",
+            "location": "Troyes, France",
+            "description": "Developing skills to turn raw data into actionable information while cultivating a critical perspective on the techniques used."
+        },
+        "type": "education"
     },
     {
-        "image": "static/projects/1/cover.jpg",
-        "start": "2019-09",
-        "end": "2023-06",
-        "title": "Licence Informatique",
-        "organisation": "Université Exemple",
-        "location": "Lyon, France",
-        "description": "Parcours orienté développement logiciel et systèmes.",
+        "image": "static/resume/1/img.png",
+        "fr" : {
+            "start": "2022",
+            "end": "2024",
+            "title": "Cycle préparatoire intégré",
+            "organisation": "Université de Technologie de Troyes",
+            "location": "Troyes, France",
+            "description": "Ce cycle allie enseignements scientifiques, techniques et humains, répartis entre cours classiques et projets en groupe. Les étudiants y développent leurs bases en sciences (40 %), en techniques de l’ingénieur (35 %) et en sciences humaines et langues (25 %)."
+        },
+        "en" : {
+            "start": "2022",
+            "end": "2024",
+            "title": "Integrated Preparatory Cycle",
+            "organisation": "University of Technology of Troyes",
+            "location": "Troyes, France",
+            "description": "This cycle combines scientific, technical, and humanistic teachings, divided between traditional courses and group projects. Students develop their foundations in sciences (40%), engineering techniques (35%), and humanities and languages (25%)."
+        },
         "type": "education"
-    }
+    },
 
+    {
+    "image": "static/resume/3/img.png",
+    "fr" : {
+        "start": "2025",
+        "end": "2025",
+        "title": "Professeur bénévole pour enfants malades",
+        "organisation": "Ecole des enfants malades",
+        "location": "Troyes, France",
+        "description": "J'ai eu l'occasion de mettre mon temps à disposition pour enseigner diverses matières à des enfants hospitalisés / malades ne pouvant pas se rendre à l'école, contribuant ainsi à leur éducation et à leur bien-être pendant une période difficile."
+    },
+    "en" : {
+        "start": "2025",
+        "end": "2025",
+        "title": "Volunteer Teacher for Sick Children",
+        "organisation": "School for Sick Children",
+        "location": "Troyes, France",
+        "description": "I had the opportunity to volunteer my time to teach various subjects to hospitalized/sick children who could not attend school, thereby contributing to their education and well-being during a difficult time."
+    },
+    "type": "asso"
+    },   
 
+    {
+    "image": "static/resume/2/img.png",
+    "fr" : {
+        "start": "2024",
+        "end": "2024",
+        "title": "",
+        "organisation": "Les cordées de la réussite - UTT",
+        "location": "Troyes, France",
+        "description": "Ce programme vise à faire de l’orientation un véritable levier d’égalité des chances. Son objectif est de lutter contre l’autocensure et de susciter l’ambition scolaire chez les élèves grâce à un accompagnement continu du collège (4ème) au lycée et jusqu’à l’enseignement supérieur."
+    },
+    "en" : {
+        "start": "2024",
+        "end": "2024",
+        "title": "Supervisor for Middle School Students",
+        "organisation": "Les cordées de la réussite - UTT",
+        "location": "Troyes, France",
+        "description": "This program aims to use guidance for career orientation as a real lever for equal opportunities. Its goal is to combat self-censorship and inspire academic ambition in students through continuous support from middle school (4th grade) to high school and into higher education."
+    },
+    "type": "asso"
+    }   
 ]
