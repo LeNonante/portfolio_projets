@@ -67,9 +67,12 @@ def index():
 
 @app.route('/<int:project_id>')
 def project(project_id):
-    with open(load_json_from_static()[project_id-1]['details']+f"_{get_locale()}.md", encoding='utf-8') as details_file:
+    with open(load_json_from_static()[project_id-1]['details']+f"_{get_locale()}.md", encoding='utf-8') as details_file: #Ouvre le fichier markdown des détails du projet
             details_md = details_file.read()
-    return render_template('project_detail.html', id=int(project_id), details_md=markdown.markdown(details_md))
+
+    # Lister tous les fichiers du dossier gallery
+    liste_gallery = sorted( f"static/projects/{project_id}/gallery/{name}" for name in os.listdir(f"static/projects/{project_id}/gallery"))
+    return render_template('project_detail.html', id=int(project_id), details_md=markdown.markdown(details_md), liste_gallery=liste_gallery)
 
 @app.route('/switchlanguage')
 def switchlanguage():
