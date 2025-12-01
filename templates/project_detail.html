@@ -78,9 +78,9 @@
                     <img src="{{ projects[id-1].image }}" alt="{{ projects[id-1][current_lang].title }}">
                 </div>
 
-                {% if projects[id-1].gallery %}
+                {% if liste_gallery %}
                 <div class="pd-gallery">
-                    {% for img in projects[id-1].gallery %}
+                    {% for img in liste_gallery %}
                     <div class="thumb"><img src="{{ img }}" alt=""></div>
                     {% endfor %}
                 </div>
