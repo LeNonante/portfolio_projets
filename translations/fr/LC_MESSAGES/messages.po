@@ -141,11 +141,11 @@ msgstr "Pas encore d'experiences associatives."
 
 #: templates/index.html:38
 msgid "Title"
-msgstr "Ingénieur..."
+msgstr "Etudiant & Consultant en Data"
 
 #: templates/index.html:39
 msgid "Subtitle"
-msgstr "Je sais pas..."
+msgstr "Passionné par la création de projets depuis petit, j’aime explorer de nombreux domaines : IA/ML, développement web, IoT, gestion de serveurs, visualisation ou optimisation. Apprendre en autonomie fait partie de ma façon de travailler : dès que je veux réaliser un projet, je me donne les moyens de comprendre et d’aller au bout. Ce portfolio (lui-même étant un projet que j'ai réalisé entièrement dasn le but d'apprendre) a pour objectif de montrer la variété des domaines auxquels je touche, en présentant mes projets (pour la plupart réalisés hors du cadre scolaire), par curiosité et envie d’apprendre. Vous y trouverez ce que j’ai construit, et ce que chaque projet m’a apporté."
 
 #: templates/index.html:46
 msgid "My Work"
