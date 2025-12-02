@@ -334,12 +334,11 @@
 
 /* Limiter la largeur du contenu markdown pour la lisibilité */
 .pd-section > * {
-    max-width: 78ch;
+    max-width: 100ch;
 }
 
 @media (max-width: 980px) {
     .pd-section > * { max-width: 100%; }
-}
 }
 
 .pd-section h3 {
