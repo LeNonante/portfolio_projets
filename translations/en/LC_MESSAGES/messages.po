@@ -141,11 +141,11 @@ msgstr "No association entries yet."
 
 #: templates/index.html:38
 msgid "Title"
-msgstr "Engineer..."
+msgstr "Student & IT Consultant in Data"
 
 #: templates/index.html:39
 msgid "Subtitle"
-msgstr "I don't know..."
+msgstr "Passionate about creating projects since I was young, I enjoy exploring many fields: AI/ML, web development, IoT, server management, visualization, and optimization. Learning autonomously is part of my way of working: whenever I want to build something, I give myself the means to understand and see it through. This portfolio (which is itself a project I built entirely to learn) aims to showcase the variety of domains I work in by presenting my projects — most of which were carried out outside of any academic framework — driven by curiosity and a desire to learn. Here, you will find what I’ve built and what each project has taught me."
 
 #: templates/index.html:46
 msgid "My Work"
