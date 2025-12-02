@@ -149,6 +149,95 @@
     display: block;
 }
 
+/* Interactive thumbnail effects */
+.pd-gallery .thumb {
+    position: relative;
+    cursor: pointer;
+    transition: transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease;
+}
+.pd-gallery .thumb:focus {
+    outline: 3px solid rgba(59,130,246,0.18);
+    outline-offset: 4px;
+}
+.pd-gallery .thumb:hover,
+.pd-gallery .thumb:focus {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.5);
+    z-index: 2;
+}
+.pd-gallery .thumb::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity .18s ease, transform .18s ease;
+    pointer-events: none;
+}
+.pd-gallery .thumb:hover::before,
+.pd-gallery .thumb:focus::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Lightbox / modal */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7,10,18,0.85);
+    z-index: 9999;
+    padding: 40px 20px;
+}
+.lightbox.show { display: flex; }
+.lightbox .lb-content {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    max-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox img {
+    max-width: 100%;
+    max-height: calc(100vh - 180px);
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    display: block;
+}
+.lb-close, .lb-prev, .lb-next {
+    position: absolute;
+    background: rgba(255,255,255,0.06);
+    border: 0;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+.lb-close { right: 8px; top: 8px; }
+.lb-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 8px; top: 50%; transform: translateY(-50%); }
+.lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.12); }
+.lb-caption {
+    margin-top: 12px;
+    color: #cbd5e1;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+    .pd-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .lightbox .lb-content { padding: 0 8px; }
+}
+
 /* Sections */
 .pd-section {
     margin-bottom: 2rem;
