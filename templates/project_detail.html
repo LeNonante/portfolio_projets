@@ -81,7 +81,7 @@
                 {% if liste_gallery %}
                 <div class="pd-gallery">
                     {% for img in liste_gallery %}
-                    <div class="thumb"><img src="{{ img }}" alt=""></div>
+                    <div class="thumb" tabindex="0" data-index="{{ loop.index0 }}"><img src="{{ img }}" alt="{{ projects[id-1][current_lang].title }} - image {{ loop.index }}"></div>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -92,6 +92,17 @@
             </section>
         </div>
     </main>
+
+                <!-- Lightbox modal -->
+                <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+                    <div class="lb-content">
+                        <button class="lb-close" aria-label="Close">✕</button>
+                        <button class="lb-prev" aria-label="Previous">‹</button>
+                        <img id="lb-image" src="" alt="">
+                        <button class="lb-next" aria-label="Next">›</button>
+                    </div>
+                    <div class="lb-caption" id="lb-caption"></div>
+                </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -121,5 +132,6 @@
             <p class="copyright">© 2025 Aurélien Musset. {{ _('Copyright') }}</p>
         </div>
     </footer>
+    <script src="{{ url_for('static', filename='js/project.js') }}"></script>
 </body>
 </html>
